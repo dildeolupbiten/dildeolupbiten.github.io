@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>dildeolupbiten - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="static/css/index.css" rel="stylesheet">
+<body>
+    <div id="navbar" class="navbar fixed-top navbar-light bg-white justify-content-start p-2" style="background-color: ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-toggler" href="index.html">dildeolupbiten</a>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-2" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header navbar navbar-light bg-white justify-content-start p-2">
+            <button type="button" class="navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-toggler" href="index.html">dildeolupbiten</a>
+        </div>
+        <div id="offcanvas-body" class="offcanvas-body navbar-light bg-white"></div>
+    </div>
+    <script src="static/js/index.js"></script>
+    <script>
+        const dropdown = new Dropdown([
+            {"innerHTML": "Apps", "children": [
+                {"href": "apps/binomial_probability/index.html", "innerHTML": "Binomial Probability"},
+                {"href": "apps/linear_regression/index.html", "innerHTML": "Linear Regression"},
+                {"href": "apps/newton_rhapson/index.html", "innerHTML": "Newton-Rhapson"},
+                {"href": "apps/rl_qlearning/index.html", "innerHTML": "RL - QLearning"}
+            ]}
+        ]);
+    </script>
+    <script src="static/js/table.js"></script>
+    <script>
+        const table = new Table(["Resolution", "Iteration", "Power", "Zoom"], document.body, 0);
+    </script>
+    <div class="d-flex justify-content-center">
+        <button id="reset" class="btn btn-dark">Reset</button>
+    </div>
+    <div class="d-flex justify-content-center my-3">
+        <canvas id="canvas" style="background-color: white;"></canvas>
+    </div>
+    <script src="static/js/mandelbrot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>dildeolupbiten - Newton-Rhapson</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../../static/css/index.css" rel="stylesheet">
+<body>
+    <div id="navbar" class="navbar fixed-top navbar-light bg-white justify-content-start p-2" style="background-color: ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-toggler" href="../../index.html">dildeolupbiten</a>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-2" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header navbar navbar-light bg-white justify-content-start p-2">
+            <button type="button" class="navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-toggler" href="../../index.html">dildeolupbiten</a>
+        </div>
+        <div id="offcanvas-body" class="offcanvas-body navbar-light bg-white"></div>
+    </div>
+    <script src="../../static/js/index.js"></script>
+    <script>
+        const entries = [
+            {"innerHTML": "Apps", "children": [
+                {"href": "../binomial_probability/index.html", "innerHTML": "Binomial Probability"},
+                {"href": "../linear_regression/index.html", "innerHTML": "Linear Regression"},
+                {"href": "index.html", "innerHTML": "Newton-Rhapson"},
+                {"href": "../rl_qlearning/index.html", "innerHTML": "RL - QLearning"}
+            ]}
+        ];
+        const dropdown = new Dropdown(entries);
+    </script>
+    <script src="../../static/js/table.js"></script>
+    <script src="static/js/table.js"></script>
+    <div class="container justify-content-center w-100">
+        <div id="xy" style="height: 200px; margin-top: 50px;" class="w-100"></div>
+        <div class="d-flex justify-content-center container w-100" style="margin-top: 50px;">
+            <canvas id="canvas" width="100" style="width: 100%; max-width:700px;"></canvas>
+        </div>
+    </div>
+    <script>
+        document.getElementById("xy").style.overflowY = "auto";
+        const xy_table = new Table(["x", "f(x)"], document.getElementById("xy"), true);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="../binomial_probability/static/js/utils.js"></script>
+    <script src="static/js/utils.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+

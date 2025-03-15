@@ -1,0 +1,33 @@
+.form-check-input {
+    border-color: #ced4da !important;
+}
+
+.table,
+.input,
+.btn,
+#input,
+#csv {
+    font-size: 14px;
+}
+
+#xy_div {
+    height: 100px;
+}
+
+@media (min-width: 600px) {
+    .table,
+    .input,
+    .btn,
+    #input,
+    #csv {
+        font-size: 16px;
+    }
+
+    #xy_div {
+        height: 150px;
+    }
+}
+
+#table {
+    margin-top: 50px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>dildeolupbiten - RL - QLearning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../../static/css/index.css" rel="stylesheet">
+<body>
+    <div id="navbar" class="navbar fixed-top navbar-light bg-white justify-content-start p-2 d-inline-flex" style="background-color: ">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-toggler" href="../../index.html">dildeolupbiten</a>
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-2" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header navbar navbar-light bg-white justify-content-start p-2">
+            <button type="button" class="navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-toggler" href="../../index.html">dildeolupbiten</a>
+        </div>
+        <div id="offcanvas-body" class="offcanvas-body navbar-light bg-white"></div>
+    </div>
+    <script src="../../static/js/index.js"></script>
+    <script>
+        const entries = [
+            {"innerHTML": "Apps", "children": [
+                {"href": "../binomial_probability/index.html", "innerHTML": "Binomial Probability"},
+                {"href": "../linear_regression/index.html", "innerHTML": "Linear Regression"},
+                {"href": "../newton_rhapson/index.html", "innerHTML": "Newton-Rhapson"},
+                {"href": "index.html", "innerHTML": "RL - QLearning"},
+            ]}
+        ];
+        const dropdown = new Dropdown(entries);
+    </script>
+    <script src="../../static/js/table.js"></script>
+    <script src="static/js/table.js"></script>
+    <div class="d-flex justify-content-center">
+        <button id="btn_train" class="btn btn-dark mx-2" style="width: 100px;">Train</button>
+        <button id="btn_play" class="btn btn-dark mx-2" style="width: 100px;">Play</button>
+        <button id="btn_reset" class="btn btn-dark mx-2" style="width: 100px;">Reset</button>
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+        <div class="progress w-25 text-center text-dark">
+            <div id="pbar" class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+    <div id="container" class="d-flex justify-content-center mt-4">
+        <table class="table table-sm container w-25">
+            <tr>
+                <td id="avg. size label" class="bg-dark text-light text-center">Avg. Size</td>
+            </tr>
+            <tr>
+                <td class="text-center" id="avg. size"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center my-2">
+        <canvas id="canvas" style="background-color: black;"></canvas>
+    </div>
+    <script src="static/js/consts.js"></script>
+    <script src="static/js/snake.js"></script>
+    <script src="static/js/agent.js"></script>
+    <script src="static/js/utils.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
