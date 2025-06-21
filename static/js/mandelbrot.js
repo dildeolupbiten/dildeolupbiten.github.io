@@ -72,10 +72,27 @@ canvas.addEventListener("mouseup", () => {
 
 canvas.addEventListener("wheel", (e) => {
     e.preventDefault();
-    const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
-    zoom.value = Math.max(1, parseFloat(zoom.value) * zoomFactor);
+    const rect = canvas.getBoundingClientRect();
+    const mouse_x = e.clientX - rect.left;
+    const mouse_y = e.clientY - rect.top;
+    const zoom_factor = e.deltaY < 0 ? 1.1 : 0.9;
+    const old_zoom = parseFloat(zoom.value);
+    const new_zoom = Math.max(1, old_zoom * zoom_factor);
+    const center_x = -0.75 + offset_x / canvas.width * (2.5 / old_zoom);
+    const center_y = 0 + offset_y / canvas.height * (2.5 / old_zoom);
+    const width = 2.5 / old_zoom;
+    const x_min = center_x - width / 2;
+    const y_min = center_y - width / 2;
+    const click_re = x_min + (mouse_x / canvas.width) * width;
+    const click_im = y_min + (mouse_y / canvas.height) * width;
+    const new_width = 2.5 / new_zoom;
+    const new_x_min = click_re - (mouse_x / canvas.width) * new_width;
+    const new_y_min = click_im - (mouse_y / canvas.height) * new_width;
+    offset_x = ((new_x_min + new_width / 2) - (-0.75)) * (canvas.width / (2.5 / new_zoom));
+    offset_y = ((new_y_min + new_width / 2) - (0)) * (canvas.height / (2.5 / new_zoom));
+    zoom.value = new_zoom.toFixed(4);
     updateMandelbrot();
-});
+}, { passive: false });
 
 canvas.addEventListener("touchstart", (e) => {
     is_dragging = true;
