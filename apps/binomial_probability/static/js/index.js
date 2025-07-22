@@ -128,7 +128,7 @@ const _alpha = params.get('alpha');
 if (_alpha) {
     alpha.value = _alpha;
 } else {
-    alpha.value = 0.001;
+    alpha.value = 0.05;
 }
 
 if (_xcase && _ncase && _xcontrol && _ncontrol) {

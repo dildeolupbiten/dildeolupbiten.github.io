@@ -130,4 +130,4 @@ table.init_tr(
     {"name": "Sig. Level", "type": "", "colspan": 2}]
 );
 
-document.getElementById("Alpha").setAttribute("step", 0.0001);
+document.getElementById("Alpha").setAttribute("step", 0.001);
