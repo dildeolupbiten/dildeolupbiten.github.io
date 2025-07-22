@@ -78,8 +78,23 @@ function approx_exp_freq(n, k, p) {
     return 1 / (1 - erf(zscore(n, k, p, 1) / (Math.sqrt(2)))) / 365.2524;
 }
 
+function two_tailed_p_value(n, k, p) {
+    const mean = n * p
+    const diff = Math.abs(k - mean)
+    const lower_bound = parseInt(mean - diff)
+    const upper_bound = parseInt(mean + diff)
+    var total = 0;
+    for (var i = 0; i < n + 1; i++) {
+        if (i <= lower_bound || i >= upper_bound) {
+            total += binom(n, i, p);
+        }
+    }
+    return total;
+}
+
 function has_significance(n, k, p, alpha) {
-    return Math.abs(erf(zscore(n, k, p) / Math.sqrt(2))) > (1 - alpha);
+    //return Math.abs(erf(zscore(n, k, p) / Math.sqrt(2))) > (1 - alpha);
+    return two_tailed_p_value(n, k, p) < alpha;
 }
 
 function cohens_d_effect(x1, x2, n1, n2) {
