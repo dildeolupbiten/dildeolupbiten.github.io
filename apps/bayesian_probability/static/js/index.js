@@ -118,7 +118,7 @@ function removeNode() {
 }
 
 function calculate() {
-    var val_p_prior = parseFloat(document.getElementById("Prior Probability (H)").value);
+    var val_p_prior = parseFloat(document.getElementById("Prior Probability P(H)").value);
     var p_prior = {true: val_p_prior, false: 1 - val_p_prior};
     var children = [...xy_table.table.children].slice(1);
     
@@ -154,7 +154,7 @@ function calculate() {
         const dict = Object.fromEntries([...Array(cptn.length).keys()].map(i => [cptn[i].name, prod[i]]));
         const prob = posteriorProbability(p_prior, dict) * 100;
         var label = [...Array(prod.length).keys()].map(i => `${cptn[i].name}${prod[i] ? '+' : '-'}`).join(",");
-        result_table.init_row([`P(H|${label})`, Math.round(prob * 100) / 100]);
+        result_table.init_row([`P(H${label ? '|' : ''}${label})`, Math.round(prob * 100) / 100]);
     }
     cptn = [];
 }
