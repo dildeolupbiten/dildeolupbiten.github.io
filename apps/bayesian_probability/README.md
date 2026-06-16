@@ -1,6 +1,6 @@
 # Bayes Olasılığı
 
-Bayes Olasılığı, başlangıçta oluşma olasılığı bilinen bir durumun çeşitli gözlemler altında, gözlemlerin birbirleriyle olan ağımlılık ve bağımsızlık durumlarına göre başlangıçta varsayılan sonucun oluşma olasılığının nasıl değiştiğini araştırmaya çalışan bir yaklaşımdır.
+Bayes Olasılığı, başlangıçta oluşma olasılığı bilinen bir durumun çeşitli gözlemler altında, gözlemlerin birbirleriyle olan bağımlılık ve bağımsızlık durumlarına göre başlangıçta varsayılan sonucun oluşma olasılığının nasıl değiştiğini araştırmaya çalışan bir yaklaşımdır.
 
 ## Örnek-1
 
