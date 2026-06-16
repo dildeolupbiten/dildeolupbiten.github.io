@@ -31,19 +31,36 @@ function changeNode(e) {
     
     var conditions = [true, false];
     var cmbs = product(conditions, pw);
+    
+    var h = {true: "H", false: "¬H"};
+    var s = {true: "+", false: "-"};
+    var splitted = val.split(",");
 
     for (var i = 0; i < power; i++) {
+        var value = power == 2 ? [conditions[i]] : cmbs.next().value;
+
         var div = document.createElement("div");
         div.className = "d-flex justify-content-center text-center";
         var label = document.createElement("label");
-        label.innerHTML = power == 2 ? conditions[i] : cmbs.next().value;
+        label.innerHTML = value;
         label.className = "w-100";
+        label.style.display = "none";
+        var txt = document.createElement("label");
+        
+        var str = [h[value[0]]];
+        for (var x = 1; x < value.length; x++) {
+            str.push(`${splitted[x - 1]}${s[value[x]]}`);
+        }
+        
+        txt.innerHTML = `P(E${td_input.n + 1}+|${str})`;
+        txt.className = "w-100";
         var input = document.createElement("input");
         input.type = "number";
         input.className = "form-control";
         input.value = 0;
         input.step = 0.01;
         div.appendChild(label);
+        div.appendChild(txt);
         div.appendChild(input);
         td_input.appendChild(div);
         label.overflow = "auto";
@@ -84,6 +101,9 @@ function addNode() {
     
     var td_input = document.createElement("td");
     td_input.className = "col border p-2";
+    td_input.n = n;
+    
+    var h = {true: "H", false: "¬H"};
     
     for (var i of [true, false]) {
         var div = document.createElement("div");
@@ -91,6 +111,10 @@ function addNode() {
         var label = document.createElement("label");
         label.innerHTML = i;
         label.className = "w-100";
+        label.style.display = "None";
+        var txt = document.createElement("label");
+        txt.innerHTML = `P(E${n + 1}+|${h[i]})`;
+        txt.className = "w-100";
         var input = document.createElement("input");
         input.type = "number";
         input.className = "form-control";
@@ -98,6 +122,7 @@ function addNode() {
         input.value = 0;
         
         div.appendChild(label);
+        div.appendChild(txt);
         div.appendChild(input);
         td_input.appendChild(div);
     }
@@ -129,7 +154,7 @@ function calculate() {
         var values = {};
         for (var div of child.children[2].children) {
             var key = div.children[0].innerHTML;
-            var value = div.children[1].value;
+            var value = div.children[2].value;
             values[key] = {true: value, false: 1 - value};
         }
         var dependancy = child.children[1].children[0].value;
