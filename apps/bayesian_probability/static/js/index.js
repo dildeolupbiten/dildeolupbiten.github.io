@@ -157,16 +157,16 @@ function calculate() {
             var value = div.children[2].value;
             values[key] = {true: value, false: 1 - value};
         }
-        var dependancy = child.children[1].children[0].value;
-        dependancy = dependancy === "None" ? [] : dependancy.split(",");
-        var dependancy_list = [];
-        if (dependancy) {
-            for (var key of dependancy) {
-                dependancy_list.push(cpt_dict[key]);
+        var dependency = child.children[1].children[0].value;
+        dependency = dependency === "None" ? [] : dependency.split(",");
+        var dependency_list = [];
+        if (dependency) {
+            for (var key of dependency) {
+                dependency_list.push(cpt_dict[key]);
             }
         }
         
-        const cpt = new CPTN(values, dependancy_list, name);
+        const cpt = new CPTN(values, dependency_list, name);
         cpt_dict[name] = cpt;
     }
     
