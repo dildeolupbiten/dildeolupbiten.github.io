@@ -224,7 +224,7 @@ $$
 
 ## Örnek-3
 
-Bu örnekte ise yine $E_1$ ve $E_2$ isimlerinde iki aracımız olsun ama aynı zamanda da $E_2$ aracı $E_1$ aracına bağımlı olmasın.
+Bu örnekte ise yine $E_1$ ve $E_2$ isimlerinde iki aracımız olsun ama bu kez $E_2$ aracı $E_1$ aracına bağımlı olsun.
 
 $E_2$ aracı için aşağıdaki sonuçları biliyor olalım:
 
@@ -235,8 +235,6 @@ $E_2$ aracı için aşağıdaki sonuçları biliyor olalım:
 - $P(E_2^+|¬H,E_1^+) = 0.56$: Bir insan tarafından üretilmiş ve $E_1$ aracı tarafından pozitif işaretlenmiş bir metnin pozitif işaretlenme olasılığı.
 
 - $P(E_2^+|¬H,E_1^-) = 0.45$: Bir insan tarafından üretilmiş ve $E_1$ aracı tarafından negatif işaretlenmiş bir metnin pozitif işaretlenme olasılığı.
-
--------
 
 Bu örnekte de yine Örnek-2'deki olasılıkları bulmaya çalışacağız:
 
