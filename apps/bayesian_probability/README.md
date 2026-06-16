@@ -98,7 +98,7 @@ $$
 
 ## Örnek-1 İçin Ekran Görüntüsü
 
-<img width="1401" height="891" alt="Image" src="https://github.com/user-attachments/assets/0f543109-4b32-478d-a65a-96cc9c113d6c" />
+<img width="1361" height="850" alt="img1" src="https://github.com/user-attachments/assets/e5feeafa-e181-4bc4-9a62-cae021d94112" />
 
 ## Örnek-2
 
@@ -220,7 +220,7 @@ $$
 
 ## Örnek-2 İçin Ekran Görüntüsü
 
-<img width="1401" height="891" alt="Image" src="https://github.com/user-attachments/assets/6fc9aa25-2084-4aab-8678-8e022dd62422" />
+<img width="1361" height="850" alt="img2" src="https://github.com/user-attachments/assets/a4d2e9cf-0bb1-4f8b-b969-8e3a252f2ae8" />
 
 ## Örnek-3
 
@@ -355,4 +355,4 @@ $$
 
 ## Örnek-3 İçin Ekran Görüntüsü
 
-<img width="1401" height="891" alt="Image" src="https://github.com/user-attachments/assets/f4512298-c4b6-4d71-8f5b-64567c36299a" />
+<img width="1361" height="850" alt="img3" src="https://github.com/user-attachments/assets/7449cd9f-7f17-4a2e-816d-dafc7b31d7ca" />
